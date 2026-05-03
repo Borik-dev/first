@@ -5,7 +5,7 @@ function wordsToNumber(text) {
         "один": 1, "два": 2, "три": 3
     };
 
-    const words = text.toLowerCase().split(/\s+/); // Розбиваємо за пробілами
+    const words = text.toLowerCase().split(/\s+/); 
     let total = 0;
 
     words.forEach(word => {

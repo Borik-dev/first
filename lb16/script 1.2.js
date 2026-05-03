@@ -8,8 +8,6 @@ a3.addEventListener("mouseenter", myFoo);
 
 function myFoo() {
     let hrefValue = this.getAttribute("href");
-    
-    
 
     this.setAttribute("title", hrefValue);
     

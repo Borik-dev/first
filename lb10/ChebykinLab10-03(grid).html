@@ -8,8 +8,8 @@
     <style>
         .grid{
             display: grid;
-            grid-template-rows: 20vh 10vh 20vh 10vh;
-            grid-template-columns: 20vw 20vw 40vw 20vw;
+            grid-template-rows: 1fr;
+            grid-template-columns: 40vw 20vw 20vw 20vw;
             gap: 3px;
             grid-template-areas: 
             "blue blue blue grey"
@@ -24,6 +24,7 @@
             border-width: 1px;
             border-color: aliceblue;
             border-style: solid;
+            
         }
         
         #blueBlock{
@@ -55,6 +56,62 @@
             background-color: brown;
         }
         
+
+  @media (min-width: 500px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "blue grey"
+        "aqua pink"
+        "yellow yellow"
+        "green green"
+        "brown brown";
+      grid-auto-rows: 150px;
+      margin: 0;
+    }
+  }
+
+
+  @media (min-width: 750px) {
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "blue blue grey"
+        "aqua pink yellow"
+        "green green yellow"
+        "brown brown brown";
+      grid-auto-rows: 180px;
+    }
+  }
+
+  @media (min-width: 950px) {
+    .grid {
+      grid-template-columns: 1.2fr 1fr 1.2fr 0.8fr; 
+
+      grid-template-columns: 20% 20% 40% 20%;
+      grid-template-areas:
+        "blue  blue  blue  grey"
+        "aqua  pink  yellow grey"
+        "green green yellow grey"
+        "brown brown brown  brown";
+      grid-auto-rows: 180px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .grid {
+      grid-template-columns: 20% 20% 40% 20%;
+      grid-template-areas:
+        "blue blue blue grey"
+        "aqua pink yellow grey"
+        "green green yellow grey"
+        "brown brown brown brown";
+      grid-auto-rows: minmax(120px, 1fr);
+      height: calc(100vh - 0px);
+    }
+  }
+
+
     </style>
 
 
@@ -68,7 +125,13 @@
         <div id="greenBlock"></div>
         <div id="brownBlock"></div>
     </div>
-
+    <th>
+      <tr>
+        <tr>
+          
+        </tr>
+      </tr>
+    </th>
 
 </body>
 </html>
